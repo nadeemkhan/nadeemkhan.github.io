@@ -1,296 +1,630 @@
-<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>
+     Felipe Sousa | Desenvolvedor Front end
+  </title>
+  
+  <meta name="viewport"     content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="author"       content="Felipe Sousa">
+  <meta name="description"  content="Front end Developer">
+  <meta name="keywords"     content="frontend, javascript, mobile, web, developer">
+  
 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
+  <script src="/js/jquery.min.js"     type="text/javascript" charset="utf-8"></script>
+  <script src="/js/jquery-github.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/elevator.min.js" type="text/javascript" charset="utf-8"></script>
 
-      https://www.apache.org/licenses/LICENSE-2.0
+  <meta name="description" content="Desenvolvedor Front end, programador de aplicações web, apaixonado por Linux e tudo do mundo Open Source">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Felipe Sousa">
+<meta property="og:url" content="felipesousa.github.io/index.html">
+<meta property="og:site_name" content="Felipe Sousa">
+<meta property="og:description" content="Desenvolvedor Front end, programador de aplicações web, apaixonado por Linux e tudo do mundo Open Source">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Felipe Sousa">
+<meta name="twitter:description" content="Desenvolvedor Front end, programador de aplicações web, apaixonado por Linux e tudo do mundo Open Source">
+<meta name="twitter:creator" content="@felipz_sousa">
+<link rel="publisher" href="u/0/+FelipeSousaDev">
+<meta property="fb:admins" content="felipe.simpsons">
+  
+  <link rel="author" type="text/css" href="https://plus.google.com/u/0/+FelipeSousaDev">
+  
 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nadeem Khan</title>
+  <link rel="icon" href="/images/header/fa-favicon.png" />
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+ga('create', '60406413', 'auto');
+ga('send', 'pageview');
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+</script>
+<!-- End Google Analytics -->
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-<link rel="stylesheet" href="material.min.css">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!--<link rel="stylesheet" href="$$hosted_libs_prefix$$/$$version$$/material.deep_purple-pink.min.css">-->
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 900;
-    }
-    </style>
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>Nadeem Khan</h3>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
-          <a href="#features" class="mdl-layout__tab">Features</a>
-          <a href="#features" class="mdl-layout__tab">Details</a>
-          <a href="#features" class="mdl-layout__tab">Technology</a>
-          <a href="#features" class="mdl-layout__tab">FAQ</a>
-          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
-            <i class="material-icons" role="presentation">add</i>
-            <span class="visuallyhidden">Add</span>
-          </button>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <div class="mdl-layout__tab-panel is-active" id="overview">
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
-              <i class="material-icons">play_circle_filled</i>
-            </header>
-            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
-              <div class="mdl-card__supporting-text">
-                <h4>UNDER CONSTRUCTION</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
-                <h4 class="mdl-cell mdl-cell--12-col">Details</h4>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-                  <div class="section__circle-container__circle mdl-color--primary"></div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-                  <h5>Lorem ipsum dolor sit amet</h5>
-                  Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
-                </div>
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
-          </section>
-          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-              <div class="mdl-card__supporting-text">
-                <h4>Technology</h4>
-                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse. Pariatur occaecat nisi laboris tempor laboris eiusmod qui id Lorem esse commodo in. Exercitation aute dolore deserunt culpa consequat elit labore incididunt elit anim.
-              </div>
-              <div class="mdl-card__actions">
-                <a href="#" class="mdl-button">Read our features</a>
-              </div>
-            </div>
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-              <i class="material-icons">more_vert</i>
-            </button>
-            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-              <li class="mdl-menu__item">Lorem</li>
-              <li class="mdl-menu__item" disabled>Ipsum</li>
-              <li class="mdl-menu__item">Dolor</li>
-            </ul>
-          </section>
-          <section class="section--footer mdl-color--white mdl-grid">
-            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-            </div>
-            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
-              <div class="section__circle-container__circle mdl-color--accent section__circle--big"></div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
-              <h5>Lorem ipsum dolor sit amet</h5>
-              Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-            </div>
-          </section>
-        </div>
-        <div class="mdl-layout__tab-panel" id="features">
-          <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h4>Features</h4>
-              Minim duis incididunt est cillum est ex occaecat consectetur. Qui sint ut et qui nisi cupidatat. Reprehenderit nostrud proident officia exercitation anim et pariatur ex.
-              <ul class="toc">
-                <h4>Contents</h4>
-                <a href="#lorem1">Lorem ipsum</a>
-                <a href="#lorem2">Lorem ipsum</a>
-                <a href="#lorem3">Lorem ipsum</a>
-                <a href="#lorem4">Lorem ipsum</a>
-                <a href="#lorem5">Lorem ipsum</a>
-              </ul>
-
-              <h5 id="lorem1">Lorem ipsum dolor sit amet</h5>
-              Excepteur et pariatur officia veniam anim culpa cupidatat consequat ad velit culpa est non.
-              <ul>
-                <li>Nisi qui nisi duis commodo duis reprehenderit consequat velit aliquip.</li>
-                <li>Dolor consectetur incididunt in ipsum laborum non et irure pariatur excepteur anim occaecat officia sint.</li>
-                <li>Lorem labore proident officia excepteur do.</li>
-              </ul>
-
-              <p>
-                Sit qui est voluptate proident minim cillum in aliquip cupidatat labore pariatur id tempor id. Proident occaecat occaecat sint mollit tempor duis dolor cillum anim. Dolore sunt ea mollit fugiat in aliqua consequat nostrud aliqua ut irure in dolore. Proident aliqua culpa sint sint exercitation. Non proident occaecat reprehenderit veniam et proident dolor id culpa ea tempor do dolor. Nulla adipisicing qui fugiat id dolor. Nostrud magna voluptate irure veniam veniam labore ipsum deserunt adipisicing laboris amet eu irure. Sunt dolore nisi velit sit id. Nostrud voluptate labore proident cupidatat enim amet Lorem officia magna excepteur occaecat eu qui. Exercitation culpa deserunt non et tempor et non.
-              </p>
-              <p>
-                Do dolor eiusmod eu mollit dolore nostrud deserunt cillum irure esse sint irure fugiat exercitation. Magna sit voluptate id in tempor elit veniam enim cupidatat ea labore elit. Aliqua pariatur eu nulla labore magna dolore mollit occaecat sint commodo culpa. Eu non minim duis pariatur Lorem quis exercitation. Sunt qui ex incididunt sit anim incididunt sit elit ad officia id.
-              </p>
-              <p id="lorem2">
-                Tempor voluptate ex consequat fugiat aliqua. Do sit et reprehenderit culpa deserunt culpa. Excepteur quis minim mollit irure nulla excepteur enim quis in laborum. Aliqua elit voluptate ad deserunt nulla reprehenderit adipisicing sint. Est in eiusmod exercitation esse commodo. Ea reprehenderit exercitation veniam adipisicing minim nostrud. Veniam dolore ex ea occaecat non enim minim id ut aliqua adipisicing ad. Occaecat excepteur aliqua tempor cupidatat aute dolore deserunt ipsum qui incididunt aliqua occaecat sit quis. Culpa sint aliqua aliqua reprehenderit veniam irure fugiat ea ad.
-              </p>
-              <p>
-                Eu minim fugiat laborum irure veniam Lorem aliqua enim. Aliqua veniam incididunt consequat irure consequat tempor do nisi deserunt. Elit dolore ad quis consectetur sint laborum anim magna do nostrud amet. Ea nulla sit consequat quis qui irure dolor. Sint deserunt excepteur consectetur magna irure. Dolor tempor exercitation dolore pariatur incididunt ut laboris fugiat ipsum sunt veniam aute sunt labore. Non dolore sit nostrud eu ad excepteur cillum eu ex Lorem duis.
-              </p>
-              <p>
-                Id occaecat velit non ipsum occaecat aliqua quis ut. Eiusmod est magna non esse est ex incididunt aute ullamco. Cillum excepteur sint ipsum qui quis velit incididunt amet. Qui deserunt anim enim laborum cillum reprehenderit duis mollit amet ad officia enim. Minim sint et quis aliqua aliqua do minim officia dolor deserunt ipsum laboris. Nulla nisi voluptate consectetur est voluptate et amet. Occaecat ut quis adipisicing ad enim. Magna est magna sit duis proident veniam reprehenderit fugiat reprehenderit enim velit ex. Ullamco laboris culpa irure aliquip ad Lorem consequat veniam ad ipsum eu. Ipsum culpa dolore sunt officia laborum quis.
-              </p>
-
-              <h5 id="lorem3">Lorem ipsum dolor sit amet</h5>
-
-              <p id="lorem4">
-                Eiusmod nulla aliquip ipsum reprehenderit nostrud non excepteur mollit amet esse est est dolor. Dolore quis pariatur sit consectetur veniam esse ullamco duis Lorem qui enim ut veniam. Officia deserunt minim duis laborum dolor in velit pariatur commodo ullamco eu. Aute adipisicing ad duis labore laboris do mollit dolor cillum sunt aliqua ullamco. Esse tempor quis cillum consequat reprehenderit. Adipisicing proident anim eu sint elit aliqua anim dolore cupidatat fugiat aliquip qui.
-              </p>
-              <p id="lorem5">
-                Nisi eiusmod esse cupidatat excepteur exercitation ipsum reprehenderit nostrud deserunt aliqua ullamco. Anim est irure commodo eiusmod pariatur officia. Est dolor ipsum excepteur magna aliqua ad veniam irure qui occaecat eiusmod aute fugiat commodo. Quis mollit incididunt amet sit minim velit eu fugiat voluptate excepteur. Sit minim id pariatur ex cupidatat cupidatat nostrud nostrud ipsum.
-              </p>
-              <p>
-                Enim ea officia excepteur ad veniam id reprehenderit eiusmod esse mollit consequat. Esse non aute ullamco Lorem aliqua qui dolore irure eiusmod aute aliqua proident labore aliqua. Ipsum voluptate voluptate exercitation laborum deserunt nulla elit aliquip et minim ex veniam. Duis cupidatat aute sunt officia mollit dolor ad elit ad aute labore nostrud duis pariatur. In est sint voluptate consectetur velit ea non labore. Ut duis ea aliqua consequat nulla laboris fugiat aute id culpa proident. Minim eiusmod laboris enim Lorem nisi excepteur mollit voluptate enim labore reprehenderit officia mollit.
-              </p>
-              <p>
-                Cupidatat labore nisi ut sunt voluptate quis sunt qui ad Lorem esse nisi. Ex esse velit ullamco incididunt occaecat dolore veniam tempor minim adipisicing amet. Consequat in exercitation est elit anim consequat cillum sint labore cillum. Aliquip mollit laboris ad labore anim.
-              </p>
-            </div>
-          </section>
-        </div>
-        <footer class="mdl-mega-footer">
-          <div class="mdl-mega-footer--middle-section">
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Features</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Updates</a></li>
-              </ul>
-            </div>
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Details</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">Spec</a></li>
-                <li><a href="#">Tools</a></li>
-                <li><a href="#">Resources</a></li>
-              </ul>
-            </div>
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">Technology</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">How it works</a></li>
-                <li><a href="#">Patterns</a></li>
-                <li><a href="#">Usage</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contracts</a></li>
-              </ul>
-            </div>
-            <div class="mdl-mega-footer--drop-down-section">
-              <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-              <h1 class="mdl-mega-footer--heading">FAQ</h1>
-              <ul class="mdl-mega-footer--link-list">
-                <li><a href="#">Questions</a></li>
-                <li><a href="#">Answers</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="mdl-mega-footer--bottom-section">
-            <div class="mdl-logo">
-              More Information
-            </div>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-              <li><a href="#">Help</a></li>
-              <li><a href="#">Privacy and Terms</a></li>
-            </ul>
-          </div>
-        </footer>
-      </main>
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    
+    <div id="header-title" class="inner">
+      <div id="profile_img">
+        <img class='bio-photo' src="/images/header/bio-photo.jpg" alt='' title='bio-photo'>
+      </div>
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Felipe Sousa</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Desenvolvedor Front end, entusiasta da web e apaixonado pelo mundo livre!</a>
+        </h2>
+      
     </div>
-    <!--<a href="https://github.com/google/material-design-lite/blob/master/templates/text-only/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>-->
-    <script src="material.min.js"></script>
-  </body>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">INICIO</a>
+        
+          <a class="main-nav-link" href="/about">SOBRE</a>
+        
+          <a class="main-nav-link" href="/projects">PROJETOS</a>
+        
+          <a class="main-nav-link" href="/archives">ARTIGOS</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      
+      <a id="nav-email-link" class="nav-icon" href="mailto:felipzbr@gmail.com" title="Email"></a>
+
+      <a id="nav-github-link" class="nav-icon" target="_blank" title="GitHub" href="https://github.com/felipesousa"></a>
+
+        <a id="nav-twitter-link" class="nav-icon" target="_blank" title="Twitter" href="https://twitter.com/felipz_sousa"></a>
+      </nav>
+
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="felipesousa.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-waka-waka-time" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/waka-waka-time/">Waka Waka.. Time</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/3X6rQmbpJ3qg2Okh2iAugT ' target="blank">Cinematic Orchestra - Evolution</a></div>
+          
+          <p><img src="/images/posts/wakatime.png" alt="Wakatime" title="Wakatime"></p>
+<p>Fala pessoal beleza? Hoje eu vou falar sobre uma ferramenta bastante interessante que me ajuda bastante a contabilizar as horas que eu passo me dedicando a um projeto, a um artigo, etc, essa ferramenta se chama <a href="https://wakatime.com/">Wakatime</a>! </p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 2 minutos</span>     
+                <a href="/2015/09/waka-waka-time/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/09/waka-waka-time/" data-id="ciexgoxd60009awy7vk0xhm91" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plus/">plus	</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/work/">work</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Angularjs-formularios" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/Angularjs-formularios/">AngularJS | Formulários</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/2A9pBtvEuy3Kp2WcJawm4L ' target="blank">Red Radio City - Two out of three ain&#39;t rad</a></div>
+          
+          <p><img src="/images/posts/angularjs-forms.png" alt="AngularJS | Formulários" title="AngularJS | Formulários"></p>
+<p>Validar formulários é uma atividade um pouco chata, porém, super importante de ser praticada, nesse artigo falarei um pouco sobre como podemos utilizar o AngularJS para nos auxiliar a validarmos formulários de forma simples e rápida.</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 8 minutes</span>     
+                <a href="/2015/09/Angularjs-formularios/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/09/Angularjs-formularios/" data-id="ciexgoxe7001kawy7jw7wx2rc" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/frontend/">frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Angularjs-filtros" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/09/Angularjs-filtros/">AngularJS | Filtros</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/5cPfmNMC3AENizySC5oPu2 ' target="blank">Sublime -Wrong Way</a></div>
+          
+          <p><img src="/images/posts/angularjs-filters.png" alt="AngularJS | Filtros" title="AngularJS | Filtros"></p>
+<p>Fala pessoal, depois de algum tempo sem escrever pro blog, resolvi levantar as mangas e por uma meta de no mínimo 1 artigo por semana, e quem sabe futuramente 1 por dia. Então, começando com o básico, resolvi escrever sobre um framework bastante conhecido - AngularJS - e sobre uma das ‘ferramentas’ interessante que ele nos pode proporcionar, sendo essas os chamados <em>filtros</em>.</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 6 minutos</span>     
+                <a href="/2015/09/Angularjs-filtros/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/09/Angularjs-filtros/" data-id="ciexgoxec001qawy7y1dpenuv" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angularjs/">angularjs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/filtros/">filtros</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Um-pouco-de-MongoDB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/Um-pouco-de-MongoDB/">MongoDB - Baby Steps</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/1nLnpLXvl68RZCSjfkyiaa ' target="blank">Green Day - Brain Stew</a></div>
+          
+          <p><img src="/images/posts/mongodb.jpg" style=" height:200px ;" alt="MongoDB - Baby Steps" title="MongoDB - Baby Steps"></p>
+<p>MongoDB é uma aplicação de open source, de alta performance, orientado a documentos. Foi escrito em C++. Muitas aplicações podem, dessa forma, modelar informações de modo muito mais natural, pois os dados podem ser aninhados em hierarquias complexas e continuar a ser indexáveis e fáceis de buscar.</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 10 minutos</span>     
+                <a href="/2015/07/Um-pouco-de-MongoDB/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/07/Um-pouco-de-MongoDB/" data-id="ciexgoxdy0017awy75b0tdnr4" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MongoDB/">MongoDB</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NoSQL/">NoSQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Um-ano-como-front-end-developer" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/05/Um-ano-como-front-end-developer/">Um ano como Front end Developer</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/6GzCkTddOn1vSln1gbSr8y ' target="blank">ACDC - Shoot to Thrill</a></div>
+          
+          <p><img src="/images/posts/fif2014-post.jpg" alt='Front in Fortaleza 2014' title='Front in Fortaleza 2014' ></p>
+<p>Um ano como desenvolvedor front end, novas experiências de vida, muitos novos amigos. Aprender que a comunidade é muito mais importante que muitas outras coisas, conhecer pessoas que buscam objetivos e metas comparadas as suas, é entusiasmante, é sensacional e, acima de tudo essencial quando se busca ser um profissional com diferencial…</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 7 minutos</span>     
+                <a href="/2015/05/Um-ano-como-front-end-developer/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/05/Um-ano-como-front-end-developer/" data-id="ciexgoxe3001cawy7of8dwqmt" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/comunity/">comunity</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/frontend/">frontend</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/life/">life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lifestyle/">lifestyle</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-A-importancia-de-prototipar" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/A-importancia-de-prototipar/">A importância de prototipar</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/6CHmPcd0X85BWVVFfHjYVI ' target="blank">TFK - Set me on fire</a></div>
+          
+          <p><img src="/images/posts/pro.jpg" alt="A importância de Prototipar" title="A importância de Prototipar"></p>
+<p>Há alguns meses, comecei a procurar arduamente processos que ajudam bastante no desenvolvimento e a organização de um projeto. Dentre vários, a prototipação foi uma delas, que visa de forma simples, ver um pouco do modelo antes de tudo…</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 4 minutos</span>     
+                <a href="/2015/04/A-importancia-de-prototipar/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/04/A-importancia-de-prototipar/" data-id="ciexgoxc50000awy7fox85fco" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/organization/">organization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/project/">project</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/prototype/">prototype</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-como-instalar-jekyll-no-linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/como-instalar-jekyll-no-linux/">Como instalar Jekyll no Linux</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/6pu9S3CeFdo8z20Jw1mZgc ' target="blank">Capital Inicial - Depois da meia noite</a></div>
+          
+          <p><img src="/images/posts/jekyll-post.jpg" alt="Como instalar Jekyll no Linux" title="Como instalar Jekyll no Linux"></p>
+<p>Atualmente, quanto mais simples e funcional a ferramenta for, mais rapidamente ela será estudada e usada, Jekyll é um Static Page Generator criado em Ruby, super fácil de se utilizar e modificar…</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 10 minutos</span>     
+                <a href="/2015/03/como-instalar-jekyll-no-linux/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/03/como-instalar-jekyll-no-linux/" data-id="ciexgoxdi000lawy7lyk58aat" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/generators/">generators</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jekyll/">jekyll</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pages/">pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/static/">static</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-um-pouco-de-linux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/um-pouco-de-linux/">Um pouco de Linux</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/2LdG9xtEzCho3jCr58M6cq ' target="blank">Artic Monkeys - Arabella</a></div>
+          
+          <p><img src="/images/posts/elemos-post.jpg" alt="Um pouco de Linux" title="Um pouco de linux"></p>
+<p>Há tempos queria escrever um pouco sobre Linux, sou fã do SO, a variedade e as opções são de encher os olhos, com isso, resolvi escrever um pouco sobre o dia a dia com o Linux…</p>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 4 minutos</span>     
+                <a href="/2015/02/um-pouco-de-linux/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/02/um-pouco-de-linux/" data-id="ciexgoxdb000cawy74hfryorc" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OS/">OS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/distro/">distro</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lifestyle/">lifestyle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-basico-em-git-parte2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/basico-em-git-parte2/">Básico em Git - Parte 2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/3oVSsJXNADnYAnZWiEWFJH ' target="blank">Sublime - What I Got</a></div>
+          
+          <p><img src="/images/posts/git.jpg" alt="Básico em Git - Parte 2" title="Básico em Git - Parte 2"></p>
+<p>Bem, voltando com a segunda parte o artigo sobre GIT, vamos aprender sobre como verificar as mudanças realizadas nos arquivos, aprender como verificar os logs do projeto e como desfazer algumas ações.<br>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 7 minutos</span>     
+                <a href="/2015/01/basico-em-git-parte2/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/01/basico-em-git-parte2/" data-id="ciexgoxdn000wawy7rsy042v4" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/control/">control</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/versionamento/">versionamento</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-basico-em-git-parte1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/basico-em-git-parte1/">Básico em Git - Parte 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+        
+          <div class="music-suggest"><a id="nav-music" class="article-icon"> <a href=' https://open.spotify.com/track/2Z2vOukzwOgqR4dkymRSWd ' target="blank">Sublime - Santeria</a></div>
+          
+          <p><img src="/images/posts/git.jpg" alt="Básico em Git - Parte 1" title="Básico em Git - Parte 1"></p>
+<p>Bem, visto que é super importante o uso de Controle de Versões em projetos para organizá-lo de forma mais correta, ver a evolução do projeto com o tempo, etc.<br>
+            
+
+              <p class="article-more-link">
+
+                <span id="timeRead">time Read: 6 minutos</span>     
+                <a href="/2015/01/basico-em-git-parte1/#more">Leia mais</a>
+              </p>
+            
+        
+    </div>
+    <footer class="article-footer">
+      <a data-url="felipesousa.github.io/2015/01/basico-em-git-parte1/" data-id="ciexgoxds0013awy7k24b7tzp" class="article-share-link">Compartilhar</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/control/">control</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/versionamento/">versionamento</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+  
+
+
+
+</section>
+        
+      </div>
+        <div class="elevator" title='back to top'>
+    <svg class="sweet-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px">
+        <path d="M70,47.5H30c-1.4,0-2.5,1.1-2.5,2.5v40c0,1.4,1.1,2.5,2.5,2.5h40c1.4,0,2.5-1.1,2.5-2.5V50C72.5,48.6,71.4,47.5,70,47.5z   M47.5,87.5h-5v-25h5V87.5z M57.5,87.5h-5v-25h5V87.5z M67.5,87.5h-5V60c0-1.4-1.1-2.5-2.5-2.5H40c-1.4,0-2.5,1.1-2.5,2.5v27.5h-5  v-35h35V87.5z"/>
+        <path d="M50,42.5c1.4,0,2.5-1.1,2.5-2.5V16l5.7,5.7c0.5,0.5,1.1,0.7,1.8,0.7s1.3-0.2,1.8-0.7c1-1,1-2.6,0-3.5l-10-10  c-1-1-2.6-1-3.5,0l-10,10c-1,1-1,2.6,0,3.5c1,1,2.6,1,3.5,0l5.7-5.7v24C47.5,41.4,48.6,42.5,50,42.5z"/>
+    </svg>
+  </div>
+
+<footer id="footer">
+  
+
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Felipe Sousa | Desenvolvedor Front End
+    </div>
+  </div>
+  <script src="/js/main.js" type="text/javascript"></script>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">INICIO</a>
+  
+    <a href="/about" class="mobile-nav-link">SOBRE</a>
+  
+    <a href="/projects" class="mobile-nav-link">PROJETOS</a>
+  
+    <a href="/archives" class="mobile-nav-link">ARTIGOS</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'felipesousagithubio';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/count.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
 </html>
