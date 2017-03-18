@@ -55,7 +55,6 @@ class Dot {
     if (this.y > bounds.bottom) this.y = bounds.top
     else if (this.y < bounds.top) this.y = bounds.bottom
 
-    // http://stackoverflow.com/a/15109215/3137109
     this.x = Math.cos(ROTATION) * (this.x - center.x) - Math.sin(ROTATION) * (this.y - center.y) + center.x
     this.y = Math.sin(ROTATION) * (this.x - center.x) + Math.cos(ROTATION) * (this.y - center.y) + center.y
 
